@@ -1,6 +1,7 @@
 package dev.tonimatas.myfriendsmod;
 
 import com.mojang.logging.LogUtils;
+import dev.tonimatas.myfriendsmod.register.ModAttachments;
 import dev.tonimatas.myfriendsmod.register.ModBlocks;
 import dev.tonimatas.myfriendsmod.register.ModItems;
 import dev.tonimatas.myfriendsmod.register.ModTabs;
@@ -18,6 +19,7 @@ public class MyFriendsMod {
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         ModTabs.CREATIVE_MODE_TABS.register(modEventBus);
+        ModAttachments.ATTACHMENT_TYPES.register(modEventBus);
         
         LOGGER.info("MyFriendsMod has been initialized!");
     }
