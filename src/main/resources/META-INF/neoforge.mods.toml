@@ -1,0 +1,40 @@
+modLoader = "javafml"
+loaderVersion = "[0,)"
+license = "MIT"
+issueTrackerURL="https://github.com/TonimatasDEV/MyPrivateMinecraftModForMyFriendsServer/issues"
+
+[[mods]]
+modId = "myfriendsmod"
+version = "${modVersion}"
+displayName = "MyFriendsMod"
+#updateJSONURL="null"
+displayURL="https://github.com/TonimatasDEV/MyPrivateMinecraftModForMyFriendsServer"
+#logoFile="null"
+credits="TonimatasDEV - Developer | Theblackcat1666 - Textures | jeixs_naraja - Ideas"
+authors = "TonimatasDEV"
+description = '''
+This is a mod created for my community private Minecraft server.
+'''
+
+[[mixins]]
+config = "myfriendsmod.mixins.json"
+
+#[[accessTransformers]]
+#file="META-INF/accesstransformer.cfg"
+
+[[dependencies.myfriendsmod]]
+modId = "neoforge"
+type = "required"
+versionRange = "${neoVersionRange}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.myfriendsmod]]
+modId = "minecraft"
+type = "required"
+versionRange = "[${minecraftVersion}]"
+ordering = "NONE"
+side = "BOTH"
+
+#[features.myfriendsmod]
+#openGLVersion="[3.2,)"
