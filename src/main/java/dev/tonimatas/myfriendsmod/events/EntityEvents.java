@@ -2,8 +2,12 @@ package dev.tonimatas.myfriendsmod.events;
 
 import dev.tonimatas.myfriendsmod.MyFriendsMod;
 import dev.tonimatas.myfriendsmod.register.ModAttachments;
+import dev.tonimatas.myfriendsmod.register.ModEffects;
 import dev.tonimatas.myfriendsmod.utils.EntityUtils;
 import net.minecraft.network.chat.Component;
+import net.minecraft.tags.DamageTypeTags;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
@@ -14,9 +18,11 @@ import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.common.EffectCures;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 
 @EventBusSubscriber(modid = MyFriendsMod.MODID)
 public class EntityEvents {
@@ -67,5 +73,24 @@ public class EntityEvents {
         if (entity instanceof Player || entity instanceof ArmorStand) return;
         
         entity.setCustomName(EntityUtils.getEntityName(entity));
+    }
+
+    @SubscribeEvent
+    public static void updateEntityNameOnDamage(LivingDeathEvent event) {
+        LivingEntity entity = event.getEntity();
+
+        if (!event.getSource().is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
+            if (entity.hasEffect(ModEffects.TOTEM_EFFECT.getDelegate())) {
+                entity.removeEffect(ModEffects.TOTEM_EFFECT.getDelegate());
+                entity.setHealth(1.0F);
+
+                entity.removeEffectsCuredBy(EffectCures.PROTECTED_BY_TOTEM);
+                entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 900, 1));
+                entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 100, 1));
+                entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 800, 0));
+                entity.level().broadcastEntityEvent(entity, (byte)35);
+                event.setCanceled(true);
+            }
+        }
     }
 }
