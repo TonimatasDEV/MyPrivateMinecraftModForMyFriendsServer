@@ -11,10 +11,10 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MyFriendsMod.MODID);
 
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> 
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MYFRIENDSMOD_TAB = CREATIVE_MODE_TABS.register("myfriendsmod_tab", () -> 
             CreativeModeTab.builder().title(Component.translatable("itemGroup.myfriendsmod")).withTabsBefore(CreativeModeTabs.COMBAT).icon(() -> 
-                    ModItems.EXAMPLE_ITEM.get().getDefaultInstance()).displayItems((parameters, output) -> {
-        output.accept(ModItems.EXAMPLE_ITEM.get());
+                    ModItems.PLATINUM_APPLE.get().getDefaultInstance()).displayItems((parameters, output) -> {
+        output.accept(ModItems.PLATINUM_APPLE.get());
         output.accept(ModBlocks.EXAMPLE_BLOCK.get());
         
     }).build());
