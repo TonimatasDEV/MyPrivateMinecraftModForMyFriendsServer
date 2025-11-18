@@ -14,5 +14,9 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ModItems.PLATINUM_APPLE.get());
+        basicItem(ModItems.BRONZE_COIN.get());
+        basicItem(ModItems.SILVER_COIN.get());
+        basicItem(ModItems.GOLD_COIN.get());
+        basicItem(ModItems.PLATINUM_COIN.get());
     }
 }
