@@ -6,10 +6,10 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
 
 public class EntityUtils {
-    
+
     public static Component getEntityName(LivingEntity entity) {
         ChatFormatting healthColor = entity.getHealth() == entity.getMaxHealth() ? ChatFormatting.GREEN : ChatFormatting.YELLOW;
-        
+
         return Component.literal("")
                 .append(Component.literal("[")
                         .withStyle(ChatFormatting.DARK_GRAY))

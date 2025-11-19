@@ -13,7 +13,7 @@ import java.util.List;
 
 public class LifeStealSword extends SwordItem {
     private final float lifeStealPercentatge;
-    
+
     public LifeStealSword(Tier p_43269_, Properties p_43272_, float lifeStealPercentatge) {
         super(p_43269_, p_43272_);
         this.lifeStealPercentatge = lifeStealPercentatge;

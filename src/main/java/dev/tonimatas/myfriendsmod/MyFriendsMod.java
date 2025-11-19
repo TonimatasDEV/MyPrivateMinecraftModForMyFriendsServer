@@ -18,7 +18,7 @@ public class MyFriendsMod {
         ModTabs.CREATIVE_MODE_TABS.register(modEventBus);
         ModAttachments.ATTACHMENT_TYPES.register(modEventBus);
         ModEffects.MOB_EFFECTS.register(modEventBus);
-        
+
         LOGGER.info("MyFriendsMod has been initialized!");
     }
 }

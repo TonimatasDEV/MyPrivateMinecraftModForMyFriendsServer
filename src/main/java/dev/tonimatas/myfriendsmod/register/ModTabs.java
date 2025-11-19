@@ -11,8 +11,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MyFriendsMod.MODID);
 
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MYFRIENDSMOD_TAB = CREATIVE_MODE_TABS.register("myfriendsmod_tab", () -> 
-            CreativeModeTab.builder().title(Component.translatable("itemGroup.myfriendsmod")).withTabsBefore(CreativeModeTabs.COMBAT).icon(() -> 
-                    ModItems.PLATINUM_APPLE.get().getDefaultInstance()).displayItems((parameters, output) -> 
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MYFRIENDSMOD_TAB = CREATIVE_MODE_TABS.register("myfriendsmod_tab", () ->
+            CreativeModeTab.builder().title(Component.translatable("itemGroup.myfriendsmod")).withTabsBefore(CreativeModeTabs.COMBAT).icon(() ->
+                    ModItems.PLATINUM_APPLE.get().getDefaultInstance()).displayItems((parameters, output) ->
                     ModItems.ITEMS.getEntries().forEach(entry -> output.accept(entry.get()))).build());
 }

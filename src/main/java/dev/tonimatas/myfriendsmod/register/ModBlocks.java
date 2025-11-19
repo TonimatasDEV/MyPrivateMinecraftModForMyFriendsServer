@@ -11,7 +11,7 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MyFriendsMod.MODID);
 
     public static final DeferredBlock<Block> EXAMPLE_BLOCK = registerBlock("example_block", BlockBehaviour.Properties.of().mapColor(MapColor.STONE));
-    
+
     public static DeferredBlock<Block> registerBlock(String name, BlockBehaviour.Properties properties) {
         DeferredBlock<Block> block = BLOCKS.registerSimpleBlock(name, properties);
         ModItems.ITEMS.registerSimpleBlockItem(block);

@@ -11,5 +11,5 @@ public class ModEffects {
     public static final DeferredRegister<MobEffect> MOB_EFFECTS = DeferredRegister.create(Registries.MOB_EFFECT, MyFriendsMod.MODID);
 
     public static final DeferredHolder<MobEffect, TotemEffect> TOTEM_EFFECT = MOB_EFFECTS.register("totem_effect", TotemEffect::new);
-    
+
 }

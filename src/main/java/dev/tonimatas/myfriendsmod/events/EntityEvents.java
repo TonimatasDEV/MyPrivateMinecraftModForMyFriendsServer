@@ -31,36 +31,36 @@ public class EntityEvents {
         LivingEntity entity = event.getEntity();
 
         int level = 1; // TODO: Change this
-        
+
         entity.setData(ModAttachments.LEVEL, level);
         AttributeInstance maxHealth = entity.getAttribute(Attributes.MAX_HEALTH);
         AttributeInstance attackDamage = entity.getAttribute(Attributes.ATTACK_DAMAGE);
         if (maxHealth != null) {
             maxHealth.setBaseValue(5 * (level - 1) + entity.getHealth());
         }
-        
+
         if (attackDamage != null) {
             attackDamage.setBaseValue(attackDamage.getValue() + 0.2 * level);
         }
 
         entity.setHealth(entity.getMaxHealth());
     }
-    
+
     @SubscribeEvent(priority = EventPriority.NORMAL)
     public static void setEntityNameOnSpawn(EntityJoinLevelEvent event) {
         Entity entity = event.getEntity();
 
         if (entity instanceof Player || entity instanceof ArmorStand) return;
-        
+
         if (entity instanceof LivingEntity livingEntity) {
             if (!entity.hasCustomName()) {
                 Component name = EntityUtils.getEntityName(livingEntity);
                 entity.setCustomName(name);
             }
-            
+
             entity.setCustomNameVisible(true);
         }
-        
+
         if (entity instanceof ItemEntity) {
             entity.setCustomNameVisible(true);
         }
@@ -71,7 +71,7 @@ public class EntityEvents {
         LivingEntity entity = event.getEntity();
 
         if (entity instanceof Player || entity instanceof ArmorStand) return;
-        
+
         entity.setCustomName(EntityUtils.getEntityName(entity));
     }
 
@@ -88,7 +88,7 @@ public class EntityEvents {
                 entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 900, 1));
                 entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 100, 1));
                 entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 800, 0));
-                entity.level().broadcastEntityEvent(entity, (byte)35);
+                entity.level().broadcastEntityEvent(entity, (byte) 35);
                 event.setCanceled(true);
             }
         }
