@@ -13,8 +13,8 @@ public class MyFriendsMod {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public MyFriendsMod(IEventBus modEventBus, ModContainer modContainer) {
-        ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
+        ModBlocks.BLOCKS.register(modEventBus);
         ModTabs.CREATIVE_MODE_TABS.register(modEventBus);
         ModAttachments.ATTACHMENT_TYPES.register(modEventBus);
         ModEffects.MOB_EFFECTS.register(modEventBus);

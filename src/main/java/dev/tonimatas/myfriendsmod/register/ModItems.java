@@ -21,6 +21,8 @@ public class ModItems {
     public static final DeferredItem<Item> GOLD_COIN = ITEMS.registerSimpleItem("gold_coin", new Item.Properties());
     public static final DeferredItem<Item> PLATINUM_COIN = ITEMS.registerSimpleItem("platinum_coin", new Item.Properties());
     public static final DeferredItem<Item> JADE = ITEMS.registerSimpleItem("jade", new Item.Properties());
+    public static final DeferredItem<Item> JADE_SWORD = ITEMS.register("jade_sword", () -> new SwordItem(ModToolTiers.JADE, new Item.Properties()
+            .attributes(SwordItem.createAttributes(ModToolTiers.JADE, 4F, -2.2F))));
     public static final DeferredItem<Item> BLOOD_SWORD = ITEMS.register("blood_sword", () -> new LifeStealSword(ModToolTiers.BLOOD, new Item.Properties()
             .attributes(SwordItem.createAttributes(ModToolTiers.BLOOD, 5F, -2.4F)), 2.5F));
     public static final DeferredItem<Item> DRY_BLOOD = ITEMS.registerSimpleItem("dry_blood", new Item.Properties());

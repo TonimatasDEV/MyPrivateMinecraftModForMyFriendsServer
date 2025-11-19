@@ -11,7 +11,9 @@
   "item.myfriendsmod.blood_sword": "Blood Sword",
   "item.myfriendsmod.chalice": "Chalice",
   "item.myfriendsmod.dry_blood": "Dry Blood",
+  "item.myfriendsmod.jade_sword": "Jade Sword",
   "tooltip.myfriendsmod.blood_sword": "Life steal: ",
+  "block.myfriendsmod.jade_ore": "Jade Ore",
   "key.categories.myfriendsmod": "MyFriendsMod",
   "key.myfriendsmod.test": "Test"
 }

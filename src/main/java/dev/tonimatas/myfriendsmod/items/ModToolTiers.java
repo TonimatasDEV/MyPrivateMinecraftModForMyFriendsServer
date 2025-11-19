@@ -9,4 +9,6 @@ import net.neoforged.neoforge.common.SimpleTier;
 public class ModToolTiers {
     public static final Tier BLOOD = new SimpleTier(BlockTags.INCORRECT_FOR_DIAMOND_TOOL,
             1400, 4f, 3f, 50, () -> Ingredient.of(ModItems.DRY_BLOOD));
+    public static final Tier JADE = new SimpleTier(BlockTags.INCORRECT_FOR_DIAMOND_TOOL,
+            800, 3f, 2f, 90, () -> Ingredient.of(ModItems.JADE));
 }

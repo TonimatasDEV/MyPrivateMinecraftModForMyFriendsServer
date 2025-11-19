@@ -22,5 +22,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.BLOOD_SWORD.get());
         basicItem(ModItems.DRY_BLOOD.get());
         basicItem(ModItems.CHALICE.get());
+        handheldItem(ModItems.JADE_SWORD.get());
     }
 }

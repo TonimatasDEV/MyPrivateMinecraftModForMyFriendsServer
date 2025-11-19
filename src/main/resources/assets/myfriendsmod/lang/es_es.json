@@ -11,7 +11,9 @@
   "item.myfriendsmod.blood_sword": "Espada de Sangre",
   "item.myfriendsmod.chalice": "Cáliz",
   "item.myfriendsmod.dry_blood": "Sangre seca",
+  "item.myfriendsmod.jade_sword": "Espada de Jade",
   "tooltip.myfriendsmod.blood_sword": "Robo de vida: ",
+  "block.myfriendsmod.jade_ore": "Mineral de Jade",
   "key.categories.myfriendsmod": "MyFriendsMod",
   "key.myfriendsmod.test": "Prueba"
 }
