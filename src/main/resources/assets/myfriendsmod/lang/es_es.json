@@ -6,5 +6,8 @@
   "item.myfriendsmod.bronze_coin": "Moneda de bronze",
   "item.myfriendsmod.silver_coin": "Moneda de plata",
   "item.myfriendsmod.gold_coin": "Moneda de oro",
-  "item.myfriendsmod.platinum_coin": "Moneda de platino"
+  "item.myfriendsmod.platinum_coin": "Moneda de platino",
+  "key.categories.myfriendsmod": "MyFriendsMod",
+  "key.myfriendsmod.test": "Prueba",
+  "item.myfriendsmod.jade": "Jade"
 }

@@ -18,5 +18,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.SILVER_COIN.get());
         basicItem(ModItems.GOLD_COIN.get());
         basicItem(ModItems.PLATINUM_COIN.get());
+        basicItem(ModItems.JADE.get());
     }
 }
