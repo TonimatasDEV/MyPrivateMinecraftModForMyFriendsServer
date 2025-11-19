@@ -13,15 +13,6 @@ public class ModTabs {
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MYFRIENDSMOD_TAB = CREATIVE_MODE_TABS.register("myfriendsmod_tab", () -> 
             CreativeModeTab.builder().title(Component.translatable("itemGroup.myfriendsmod")).withTabsBefore(CreativeModeTabs.COMBAT).icon(() -> 
-                    ModItems.PLATINUM_APPLE.get().getDefaultInstance()).displayItems((parameters, output) -> {
-                        output.accept(ModItems.PLATINUM_APPLE.get());
-                        output.accept(ModBlocks.EXAMPLE_BLOCK.get());
-                        
-                        output.accept(ModItems.BRONZE_COIN.get());
-                        output.accept(ModItems.SILVER_COIN.get());
-                        output.accept(ModItems.GOLD_COIN.get());
-                        output.accept(ModItems.PLATINUM_COIN.get());
-    }).build());
-    
-    
+                    ModItems.PLATINUM_APPLE.get().getDefaultInstance()).displayItems((parameters, output) -> 
+                    ModItems.ITEMS.getEntries().forEach(entry -> output.accept(entry.get()))).build());
 }
