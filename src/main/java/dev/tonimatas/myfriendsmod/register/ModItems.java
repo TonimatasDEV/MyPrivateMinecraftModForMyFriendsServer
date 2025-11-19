@@ -2,6 +2,7 @@ package dev.tonimatas.myfriendsmod.register;
 
 import dev.tonimatas.myfriendsmod.MyFriendsMod;
 import dev.tonimatas.myfriendsmod.items.ModToolTiers;
+import dev.tonimatas.myfriendsmod.items.custom.LifeStealSword;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
@@ -20,6 +21,6 @@ public class ModItems {
     public static final DeferredItem<Item> GOLD_COIN = ITEMS.registerSimpleItem("gold_coin", new Item.Properties());
     public static final DeferredItem<Item> PLATINUM_COIN = ITEMS.registerSimpleItem("platinum_coin", new Item.Properties());
     public static final DeferredItem<Item> JADE = ITEMS.registerSimpleItem("jade", new Item.Properties());
-    public static final DeferredItem<Item> BLOOD_SWORD = ITEMS.registerSimpleItem("blood_sword", new Item.Properties().attributes(
-            SwordItem.createAttributes(ModToolTiers.BLOOD, 5F, -2.4F)));
+    public static final DeferredItem<Item> BLOOD_SWORD = ITEMS.register("blood_sword", () -> new LifeStealSword(ModToolTiers.BLOOD, new Item.Properties()
+            .attributes(SwordItem.createAttributes(ModToolTiers.BLOOD, 5F, -2.4F)), 2.5F));
 }

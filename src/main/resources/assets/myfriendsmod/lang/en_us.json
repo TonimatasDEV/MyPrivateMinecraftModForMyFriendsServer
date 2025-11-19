@@ -9,6 +9,7 @@
   "item.myfriendsmod.platinum_coin": "Platinum Coin",
   "item.myfriendsmod.jade": "Jade",
   "item.myfriendsmod.blood_sword": "Blood Sword",
+  "tooltip.myfriendsmod.blood_sword": "Life steal: ",
   "key.categories.myfriendsmod": "MyFriendsMod",
   "key.myfriendsmod.test": "Test"
 }

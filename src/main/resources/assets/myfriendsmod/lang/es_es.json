@@ -1,4 +1,4 @@
-{  
+{
   "itemGroup.myfriendsmod": "MyFriendsMod",
   "block.myfriendsmod.example_block": "Example Block",
   "item.myfriendsmod.platinum_apple": "Manzana de platino",
@@ -7,8 +7,9 @@
   "item.myfriendsmod.silver_coin": "Moneda de plata",
   "item.myfriendsmod.gold_coin": "Moneda de oro",
   "item.myfriendsmod.platinum_coin": "Moneda de platino",
-  "key.categories.myfriendsmod": "MyFriendsMod",
-  "key.myfriendsmod.test": "Prueba",
   "item.myfriendsmod.jade": "Jade",
-  "item.myfriendsmod.blood_sword": "Espada de Sangre"
+  "item.myfriendsmod.blood_sword": "Espada de Sangre",
+  "tooltip.myfriendsmod.blood_sword": "Robo de vida: ",
+  "key.categories.myfriendsmod": "MyFriendsMod",
+  "key.myfriendsmod.test": "Prueba"
 }
