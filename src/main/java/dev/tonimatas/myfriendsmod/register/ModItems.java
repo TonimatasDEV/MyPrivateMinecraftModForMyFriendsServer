@@ -23,4 +23,6 @@ public class ModItems {
     public static final DeferredItem<Item> JADE = ITEMS.registerSimpleItem("jade", new Item.Properties());
     public static final DeferredItem<Item> BLOOD_SWORD = ITEMS.register("blood_sword", () -> new LifeStealSword(ModToolTiers.BLOOD, new Item.Properties()
             .attributes(SwordItem.createAttributes(ModToolTiers.BLOOD, 5F, -2.4F)), 2.5F));
+    public static final DeferredItem<Item> DRY_BLOOD = ITEMS.registerSimpleItem("dry_blood", new Item.Properties());
+    public static final DeferredItem<Item> CHALICE = ITEMS.registerSimpleItem("chalice", new Item.Properties());
 }

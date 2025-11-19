@@ -20,5 +20,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.PLATINUM_COIN.get());
         basicItem(ModItems.JADE.get());
         handheldItem(ModItems.BLOOD_SWORD.get());
+        basicItem(ModItems.DRY_BLOOD.get());
+        basicItem(ModItems.CHALICE.get());
     }
 }
