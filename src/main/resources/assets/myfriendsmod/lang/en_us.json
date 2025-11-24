@@ -1,6 +1,5 @@
 {
   "itemGroup.myfriendsmod": "MyFriendsMod",
-  "block.myfriendsmod.example_block": "Example Block",
   "item.myfriendsmod.platinum_apple": "Platinum Apple",
   "effect.myfriendsmod.totem_effect": "Totem",
   "item.myfriendsmod.bronze_coin": "Bronze Coin",
@@ -14,6 +13,7 @@
   "item.myfriendsmod.jade_sword": "Jade Sword",
   "tooltip.myfriendsmod.blood_sword": "Life steal: ",
   "block.myfriendsmod.jade_ore": "Jade Ore",
+  "block.myfriendsmod.deepslate_jade_ore": "Deepslate Jade Ore",
   "key.categories.myfriendsmod": "MyFriendsMod",
   "key.myfriendsmod.test": "Test"
 }
