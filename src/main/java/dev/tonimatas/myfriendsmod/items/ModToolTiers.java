@@ -13,4 +13,6 @@ public class ModToolTiers {
             800, 3f, 4f, 90, () -> Ingredient.of(ModItems.JADE));
     public static final Tier VOID = new SimpleTier(BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
             2500, 60f, 5f, 100, Ingredient::of);
+    public static final Tier INFERNAL = new SimpleTier(BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            3100, 5f, 22f, 100, Ingredient::of);
 }

@@ -29,4 +29,7 @@ public class ModItems {
     public static final DeferredItem<Item> VOID_AXE = ITEMS.register("void_axe", () -> new AxeItem(ModToolTiers.VOID, new Item.Properties()
             .attributes(AxeItem.createAttributes(ModToolTiers.VOID, 4F, -2.2F)).rarity(Rarity.EPIC)));
     public static final DeferredItem<Item> CACTUS_BOW = ITEMS.register("cactus_bow", () -> new BowItem(new Item.Properties().rarity(Rarity.UNCOMMON)));
+    public static final DeferredItem<Item> JADE_ARROW = ITEMS.register("jade_arrow", () -> new ArrowItem(new Item.Properties().rarity(Rarity.COMMON)));
+    public static final DeferredItem<Item> INFERNAL_GREATSWORD = ITEMS.register("infernal_greatsword", () -> new LifeStealSword(ModToolTiers.BLOOD, new Item.Properties()
+            .attributes(SwordItem.createAttributes(ModToolTiers.BLOOD, 5F, -2.4F)).rarity(Rarity.EPIC), 2.5F));
 }

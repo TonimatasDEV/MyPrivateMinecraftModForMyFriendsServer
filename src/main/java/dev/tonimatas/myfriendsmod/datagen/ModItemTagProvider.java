@@ -23,12 +23,16 @@ public class ModItemTagProvider extends ItemTagsProvider {
     protected void addTags(HolderLookup.@NotNull Provider provider) {
         tag(ItemTags.SWORDS)
                 .add(ModItems.BLOOD_SWORD.get())
-                .add(ModItems.JADE_SWORD.get());
+                .add(ModItems.JADE_SWORD.get())
+                .add(ModItems.INFERNAL_GREATSWORD.get());
 
         tag(ItemTags.AXES)
                 .add(ModItems.VOID_AXE.get());
 
         tag(ItemTags.BOW_ENCHANTABLE)
                 .add(ModItems.CACTUS_BOW.get());
+
+        tag(ItemTags.ARROWS)
+                .add(ModItems.JADE_ARROW.get());
     }
 }
