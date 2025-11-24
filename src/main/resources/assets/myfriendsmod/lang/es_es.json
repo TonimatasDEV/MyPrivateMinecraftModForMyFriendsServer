@@ -16,5 +16,6 @@
   "block.myfriendsmod.jade_ore": "Mineral de Jade",
   "block.myfriendsmod.deepslate_jade_ore": "Mineral de Jade de pizarra profunda",
   "key.categories.myfriendsmod": "MyFriendsMod",
-  "key.myfriendsmod.test": "Prueba"
+  "key.myfriendsmod.test": "Prueba",
+  "item.myfriendsmod.cactus_bow": "Arco de cactus"
 }

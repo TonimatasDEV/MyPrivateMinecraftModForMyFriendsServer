@@ -27,5 +27,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
         tag(ItemTags.AXES)
                 .add(ModItems.VOID_AXE.get());
+
+        tag(ItemTags.BOW_ENCHANTABLE)
+                .add(ModItems.CACTUS_BOW.get());
     }
 }

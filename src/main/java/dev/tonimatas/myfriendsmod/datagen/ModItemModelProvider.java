@@ -24,5 +24,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.CHALICE.get());
         handheldItem(ModItems.VOID_AXE.get());
         handheldItem(ModItems.JADE_SWORD.get());
+        handheldItem(ModItems.CACTUS_BOW.get());
     }
 }

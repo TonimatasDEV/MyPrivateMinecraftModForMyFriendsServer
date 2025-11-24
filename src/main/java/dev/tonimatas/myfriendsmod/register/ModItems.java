@@ -4,12 +4,8 @@ import dev.tonimatas.myfriendsmod.MyFriendsMod;
 import dev.tonimatas.myfriendsmod.items.ModToolTiers;
 import dev.tonimatas.myfriendsmod.items.custom.LifeStealSword;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.AxeItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.*;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -32,4 +28,5 @@ public class ModItems {
     public static final DeferredItem<Item> CHALICE = ITEMS.registerSimpleItem("chalice", new Item.Properties().rarity(Rarity.RARE));
     public static final DeferredItem<Item> VOID_AXE = ITEMS.register("void_axe", () -> new AxeItem(ModToolTiers.VOID, new Item.Properties()
             .attributes(AxeItem.createAttributes(ModToolTiers.VOID, 4F, -2.2F)).rarity(Rarity.EPIC)));
+    public static final DeferredItem<Item> CACTUS_BOW = ITEMS.register("cactus_bow", () -> new BowItem(new Item.Properties().rarity(Rarity.UNCOMMON)));
 }
