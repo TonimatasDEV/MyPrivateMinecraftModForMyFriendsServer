@@ -5,6 +5,8 @@ import dev.tonimatas.myfriendsmod.register.ModAttachments;
 import dev.tonimatas.myfriendsmod.register.ModEffects;
 import dev.tonimatas.myfriendsmod.utils.EntityUtils;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.stats.Stat;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -19,6 +21,7 @@ import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.EffectCures;
+import net.neoforged.neoforge.event.StatAwardEvent;
 import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
 import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
@@ -30,7 +33,7 @@ public class EntityEvents {
     public static void onEntitySpawn(FinalizeSpawnEvent event) {
         LivingEntity entity = event.getEntity();
 
-        int level = 1; // TODO: Change this
+        int level = EntityUtils.getAroundLevel(entity);
 
         entity.setData(ModAttachments.LEVEL, level);
         AttributeInstance maxHealth = entity.getAttribute(Attributes.MAX_HEALTH);
@@ -90,6 +93,18 @@ public class EntityEvents {
                 entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 800, 0));
                 entity.level().broadcastEntityEvent(entity, (byte) 35);
                 event.setCanceled(true);
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public static void mobKillIncrease(StatAwardEvent event) {
+        Stat<?> stat = event.getStat();
+        
+        if (stat.getName().equals("minecraft.custom:minecraft.mob_kills")) {
+            if (event.getEntity() instanceof ServerPlayer player) {
+                int level = player.getStats().getValue(stat) / 100 + 1;
+                player.setData(ModAttachments.LEVEL, level);
             }
         }
     }
