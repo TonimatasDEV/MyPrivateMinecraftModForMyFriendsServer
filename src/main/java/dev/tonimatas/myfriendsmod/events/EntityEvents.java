@@ -76,7 +76,7 @@ public class EntityEvents {
     }
 
     @SubscribeEvent
-    public static void updateEntityNameOnDamage(LivingDeathEvent event) {
+    public static void totemEffect(LivingDeathEvent event) {
         LivingEntity entity = event.getEntity();
 
         if (!event.getSource().is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
