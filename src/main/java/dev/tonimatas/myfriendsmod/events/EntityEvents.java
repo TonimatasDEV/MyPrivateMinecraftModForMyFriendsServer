@@ -1,34 +1,19 @@
 package dev.tonimatas.myfriendsmod.events;
 
 import dev.tonimatas.myfriendsmod.MyFriendsMod;
-import dev.tonimatas.myfriendsmod.register.ModAttachments;
 import dev.tonimatas.myfriendsmod.register.ModEffects;
-import dev.tonimatas.myfriendsmod.utils.EntityUtils;
-import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.stats.Stat;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.ai.attributes.AttributeInstance;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.decoration.ArmorStand;
-import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.entity.player.Player;
-import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.common.EffectCures;
-import net.neoforged.neoforge.event.StatAwardEvent;
-import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
-import net.neoforged.neoforge.event.entity.living.FinalizeSpawnEvent;
-import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 
 @EventBusSubscriber(modid = MyFriendsMod.MODID)
 public class EntityEvents {
+    /* I don't want to implement it right now
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void onEntitySpawn(FinalizeSpawnEvent event) {
         LivingEntity entity = event.getEntity();
@@ -77,6 +62,7 @@ public class EntityEvents {
 
         entity.setCustomName(EntityUtils.getEntityName(entity));
     }
+     */
 
     @SubscribeEvent
     public static void totemEffect(LivingDeathEvent event) {
@@ -97,6 +83,7 @@ public class EntityEvents {
         }
     }
 
+    /* I don't want to implement it right now
     @SubscribeEvent
     public static void mobKillIncrease(StatAwardEvent event) {
         Stat<?> stat = event.getStat();
@@ -108,4 +95,5 @@ public class EntityEvents {
             }
         }
     }
+     */
 }
