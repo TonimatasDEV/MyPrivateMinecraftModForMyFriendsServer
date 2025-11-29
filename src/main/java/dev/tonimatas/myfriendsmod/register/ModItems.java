@@ -13,7 +13,7 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MyFriendsMod.MODID);
 
     public static final DeferredItem<Item> PLATINUM_APPLE = ITEMS.registerSimpleItem("platinum_apple", new Item.Properties().food(new FoodProperties.Builder()
-            .alwaysEdible().nutrition(12).saturationModifier(10f).effect(() -> new MobEffectInstance(ModEffects.TOTEM_EFFECT, 400, 0), 100)
+            .alwaysEdible().nutrition(10).saturationModifier(1f).effect(() -> new MobEffectInstance(ModEffects.TOTEM_EFFECT, 400, 0), 100)
             .build()).rarity(Rarity.RARE));
     public static final DeferredItem<Item> BRONZE_COIN = ITEMS.registerSimpleItem("bronze_coin", new Item.Properties().rarity(Rarity.COMMON));
     public static final DeferredItem<Item> SILVER_COIN = ITEMS.registerSimpleItem("silver_coin", new Item.Properties().rarity(Rarity.UNCOMMON));
